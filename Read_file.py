@@ -81,8 +81,8 @@ for key, value in parse_message_as_dict(fields).items():
 
             try:
                 for sub_sub_key, sub_sub_value in sub_value.items():
-                    print(f"{sub_key} -> {sub_sub_key}: {sub_sub_value}")
+                    print(f"Tag: {sub_key} -> {sub_sub_key}: {sub_sub_value}")
             except:
-                print(f"{key} -> {sub_key} -> {sub_value}")
+                print(f"Tag: {key} -> Sub_tag: {sub_key} -> {sub_value}")
     except:
-        print(f"{key} -> {value}")
+        print(f"Tag: {key} -> {value}")
