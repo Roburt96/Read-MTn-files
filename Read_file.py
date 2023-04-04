@@ -70,7 +70,7 @@ def handle_special_message(message, subkey):
     }
     return {subkey: special_subdict}
 
-### print JSON file ###
+### print JSON ###
 
 #print(json.dumps(parse_message_as_dict(fields), indent=4))
 
