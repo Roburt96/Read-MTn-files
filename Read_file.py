@@ -70,5 +70,19 @@ def handle_special_message(message, subkey):
     }
     return {subkey: special_subdict}
 
+### print JSON file ###
 
-print(json.dumps(parse_message_as_dict(fields), indent=4))
+#print(json.dumps(parse_message_as_dict(fields), indent=4))
+
+### print every key, value on new line ###
+for key, value in parse_message_as_dict(fields).items():
+    try:
+        for sub_key, sub_value in value.items():
+
+            try:
+                for sub_sub_key, sub_sub_value in sub_value.items():
+                    print(f"{sub_key} -> {sub_sub_key}: {sub_sub_value}")
+            except:
+                print(f"{key} -> {sub_key} -> {sub_value}")
+    except:
+        print(f"{key} -> {value}")
